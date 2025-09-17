@@ -98,15 +98,32 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <a 
-                href="https://wa.me/919412104618" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground inline-flex h-9 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              <Button 
+                variant="outline" 
+                className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group"
+                onClick={() => {
+                  try {
+                    const phoneNumber = "919412104618";
+                    const message = "Hello! I found your Nextup Studio website and would like to connect.";
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    
+                    // Create temporary link and click it
+                    const link = document.createElement('a');
+                    link.href = whatsappUrl;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  } catch (error) {
+                    console.log('WhatsApp redirect failed, trying direct method');
+                    window.open('https://wa.me/919412104618', '_blank', 'noopener,noreferrer');
+                  }
+                }}
               >
                 <MessageCircle className="h-4 w-4 group-hover:scale-110 transition-transform" />
                 <span className="font-medium">WhatsApp</span>
-              </a>
+              </Button>
             </div>
           </nav>
         </header>
