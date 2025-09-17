@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, MessageCircle } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -102,27 +102,15 @@ const Index = () => {
                 variant="outline" 
                 className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group"
                 onClick={() => {
-                  try {
-                    const phoneNumber = "919412104618";
-                    const message = "Hello! I found your Nextup Studio website and would like to connect.";
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    
-                    // Create temporary link and click it
-                    const link = document.createElement('a');
-                    link.href = whatsappUrl;
-                    link.target = '_blank';
-                    link.rel = 'noopener noreferrer';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                  } catch (error) {
-                    console.log('WhatsApp redirect failed, trying direct method');
-                    window.open('https://wa.me/919412104618', '_blank', 'noopener,noreferrer');
-                  }
+                  const emailAddress = "sanjayvansu1973@gmail.com";
+                  const subject = "Contact from Nextup Studio Website";
+                  const body = "Hello! I found your Nextup Studio website and would like to get in touch.";
+                  const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                  window.location.href = mailtoUrl;
                 }}
               >
-                <MessageCircle className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">WhatsApp</span>
+                <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                <span className="font-medium">Email</span>
               </Button>
             </div>
           </nav>
