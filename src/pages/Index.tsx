@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2 } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, MessageCircle } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   const websites = [
@@ -62,9 +63,17 @@ const Index = () => {
             <div className="gradient-text text-3xl font-bold">
               Nextup Studio
             </div>
-            <Button variant="outline" className="glass-pro border-primary/30 hover:bg-primary/10 transition-elastic">
-              Contact
-            </Button>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <Button 
+                variant="outline" 
+                className="glass-pro border-primary/30 hover:bg-primary/10 transition-elastic flex items-center gap-2"
+                onClick={() => window.open('https://wa.me/919412104618', '_blank')}
+              >
+                <MessageCircle className="h-4 w-4" />
+                Contact
+              </Button>
+            </div>
           </nav>
         </header>
 
