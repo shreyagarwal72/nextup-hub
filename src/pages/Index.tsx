@@ -127,7 +127,14 @@ const Index = () => {
               Discover our collection of professional websites, innovative tools, and creative projects. 
               Each platform represents a unique aspect of our digital craftsmanship and technical excellence.
             </p>
-            <Button size="lg" className="btn-hero text-lg px-12 py-6 rounded-2xl">
+            <Button 
+              size="lg" 
+              className="btn-hero text-lg px-12 py-6 rounded-2xl"
+              onClick={() => {
+                const portfolioSection = document.getElementById('portfolio-section');
+                portfolioSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
               Explore Our Work
               <ExternalLink className="ml-3 h-6 w-6" />
             </Button>
@@ -135,7 +142,7 @@ const Index = () => {
         </section>
 
         {/* Enhanced Websites Grid */}
-        <section className="container mx-auto px-6 py-24">
+        <section id="portfolio-section" className="container mx-auto px-6 py-24">
           <div className="text-center mb-20 slide-up">
             <h2 className="text-5xl font-bold mb-6 gradient-text">Our Digital Portfolio</h2>
             <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
