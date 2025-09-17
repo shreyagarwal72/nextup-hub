@@ -127,9 +127,15 @@ export default {
           "0%": { transform: "translate(0, 0)" },
           "100%": { transform: "translate(50px, 50px)" },
         },
-        "backgroundPulse": {
-          "0%, 100%": { opacity: "1", transform: "scale(1)" },
-          "50%": { opacity: "0.8", transform: "scale(1.1)" },
+        "backgroundFlow": {
+          "0%, 100%": { opacity: "1", transform: "scale(1) rotate(0deg)" },
+          "25%": { opacity: "0.8", transform: "scale(1.1) rotate(2deg)" },
+          "50%": { opacity: "0.9", transform: "scale(0.95) rotate(-1deg)" },
+          "75%": { opacity: "0.7", transform: "scale(1.05) rotate(1deg)" },
+        },
+        "sparkleMove": {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(-200px, -100px)" },
         },
       },
       animation: {
@@ -141,8 +147,9 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out",
         "slide-up": "slide-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         "fade-in-scale": "fade-in-scale 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        "gridMove": "gridMove 20s linear infinite",
-        "backgroundPulse": "backgroundPulse 20s ease-in-out infinite",
+        "gridMove": "gridMove 25s linear infinite",
+        "backgroundFlow": "backgroundFlow 25s ease-in-out infinite",
+        "sparkleMove": "sparkleMove 30s linear infinite",
       },
     },
   },

@@ -44,35 +44,49 @@ const Index = () => {
 
   return (
     <div className="min-h-screen animated-bg relative overflow-hidden">
-      {/* Professional Motion Background */}
+      {/* Professional Motion Background with Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Primary floating orbs with enhanced motion */}
+        {/* Enhanced floating orbs with complex motion */}
         <div className="absolute top-20 left-10 w-80 h-80 bg-primary/25 rounded-full blur-3xl floating pulse-glow depth-1"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl floating-slow pulse-glow depth-1" style={{ animationDelay: "3s" }}></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary/15 rounded-full blur-2xl floating motion-blur depth-1" style={{ animationDelay: "6s" }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary/15 rounded-full blur-2xl wave-motion motion-blur depth-1" style={{ animationDelay: "6s" }}></div>
+        <div className="absolute top-40 right-40 w-64 h-64 bg-accent/18 rounded-full blur-3xl particle-float pulse-glow depth-1" style={{ animationDelay: "9s" }}></div>
         
-        {/* Orbiting elements */}
-        <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full orbit-1 depth-2"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-accent rounded-full orbit-2 depth-2"></div>
+        {/* Multiple orbiting elements with different speeds */}
+        <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full orbit-1 depth-2 pulse-glow"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-accent rounded-full orbit-2 depth-2 pulse-glow"></div>
+        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-primary/80 rounded-full orbit-3 depth-2" style={{ animationDelay: "5s" }}></div>
         
-        {/* Geometric motion shapes */}
-        <div className="absolute top-32 right-32 w-24 h-24 border border-primary/30 rounded-lg rotate-45 floating pulse-glow depth-2" style={{ animationDelay: "1s" }}></div>
+        {/* Floating particles */}
+        <div className="absolute top-1/6 left-1/6 w-1 h-1 bg-primary rounded-full particle-float depth-1" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute bottom-1/6 right-1/6 w-1 h-1 bg-accent rounded-full particle-float depth-1" style={{ animationDelay: "7s" }}></div>
+        <div className="absolute top-2/3 left-1/5 w-1 h-1 bg-primary/70 rounded-full particle-float depth-1" style={{ animationDelay: "4s" }}></div>
+        
+        {/* Enhanced geometric motion shapes */}
+        <div className="absolute top-32 right-32 w-24 h-24 border border-primary/30 rounded-lg rotate-45 wave-motion pulse-glow depth-2" style={{ animationDelay: "1s" }}></div>
         <div className="absolute bottom-40 left-32 w-16 h-16 border border-accent/30 rounded-full floating-slow pulse-glow depth-2" style={{ animationDelay: "4s" }}></div>
+        <div className="absolute top-1/3 right-1/6 w-20 h-20 border-2 border-primary/20 rounded-xl rotate-12 particle-float depth-2" style={{ animationDelay: "8s" }}></div>
         
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]">
+        {/* Enhanced animated grid pattern */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(hsl(var(--primary)) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)
+              linear-gradient(hsl(var(--primary) / 0.4) 1px, transparent 1px),
+              linear-gradient(90deg, hsl(var(--primary) / 0.4) 1px, transparent 1px),
+              radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.2) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px',
-            animation: 'gridMove 20s linear infinite'
+            backgroundSize: '40px 40px, 40px 40px, 80px 80px',
+            animation: 'gridMove 25s linear infinite'
           }}></div>
         </div>
         
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 motion-blur"></div>
+        {/* Multi-layer gradient overlays with motion */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-transparent to-accent/6 motion-blur"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-accent/4 via-primary/3 to-transparent wave-motion" style={{ animationDelay: "10s" }}></div>
+        
+        {/* Animated light rays */}
+        <div className="absolute top-0 left-1/4 w-px h-1/3 bg-gradient-to-b from-primary/30 to-transparent particle-float" style={{ animationDelay: "3s" }}></div>
+        <div className="absolute bottom-0 right-1/3 w-px h-1/4 bg-gradient-to-t from-accent/25 to-transparent wave-motion" style={{ animationDelay: "7s" }}></div>
       </div>
 
       <div className="relative z-10 depth-3">
@@ -86,11 +100,16 @@ const Index = () => {
               <ThemeToggle />
               <Button 
                 variant="outline" 
-                className="glass-pro border-primary/30 hover:bg-primary/10 transition-elastic flex items-center gap-2"
-                onClick={() => window.open('https://wa.me/919412104618', '_blank')}
+                className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group"
+                onClick={() => {
+                  const phoneNumber = "919412104618";
+                  const message = encodeURIComponent("Hello! I found your portfolio website and would like to get in touch.");
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                }}
               >
-                <MessageCircle className="h-4 w-4" />
-                Contact
+                <MessageCircle className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                <span className="font-medium">WhatsApp</span>
               </Button>
             </div>
           </nav>

@@ -172,7 +172,7 @@
     overflow-x: hidden;
   }
   
-  /* Professional animated background */
+  /* Professional animated background with particles */
   .animated-bg {
     background: var(--gradient-secondary);
     position: relative;
@@ -187,22 +187,56 @@
     width: 100%;
     height: 100%;
     background-image: 
-      radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--primary) / 0.05) 0%, transparent 50%);
-    animation: backgroundPulse 20s ease-in-out infinite;
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 75% 75%, hsl(var(--accent) / 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 50% 100%, hsl(var(--primary) / 0.08) 0%, transparent 60%),
+      radial-gradient(circle at 0% 50%, hsl(var(--accent) / 0.1) 0%, transparent 50%);
+    animation: backgroundFlow 25s ease-in-out infinite;
     pointer-events: none;
   }
   
-  @keyframes backgroundPulse {
+  .animated-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--primary)), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--accent)), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--primary)), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsl(var(--accent)), transparent),
+      radial-gradient(2px 2px at 160px 30px, hsl(var(--primary)), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkleMove 30s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  @keyframes backgroundFlow {
     0%, 100% { 
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1) rotate(0deg);
+    }
+    25% { 
+      opacity: 0.8;
+      transform: scale(1.1) rotate(2deg);
     }
     50% { 
-      opacity: 0.8;
-      transform: scale(1.1);
+      opacity: 0.9;
+      transform: scale(0.95) rotate(-1deg);
     }
+    75% { 
+      opacity: 0.7;
+      transform: scale(1.05) rotate(1deg);
+    }
+  }
+  
+  @keyframes sparkleMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-200px, -100px); }
   }
 }
 
@@ -362,52 +396,106 @@
   .depth-4 { z-index: 40; }
   .depth-5 { z-index: 50; }
 
-  /* Professional motion effects */
+  /* Enhanced professional motion effects */
   .motion-blur {
-    animation: motionBlur 15s ease-in-out infinite;
+    animation: motionBlur 18s ease-in-out infinite;
   }
   
   .orbit-1 {
-    animation: orbit1 25s linear infinite;
+    animation: orbit1 20s linear infinite;
   }
   
   .orbit-2 {
-    animation: orbit2 30s linear infinite reverse;
+    animation: orbit2 25s linear infinite reverse;
+  }
+  
+  .orbit-3 {
+    animation: orbit3 30s linear infinite;
   }
   
   .pulse-glow {
-    animation: pulseGlow 8s ease-in-out infinite;
+    animation: pulseGlow 6s ease-in-out infinite;
+  }
+  
+  .wave-motion {
+    animation: waveMotion 12s ease-in-out infinite;
+  }
+  
+  .particle-float {
+    animation: particleFloat 15s ease-in-out infinite;
   }
   
   @keyframes motionBlur {
     0%, 100% { 
       filter: blur(0px);
-      opacity: 0.3;
+      opacity: 0.4;
+      transform: scale(1);
     }
-    50% { 
+    33% { 
+      filter: blur(1px);
+      opacity: 0.3;
+      transform: scale(1.02);
+    }
+    66% { 
       filter: blur(2px);
-      opacity: 0.2;
+      opacity: 0.25;
+      transform: scale(0.98);
     }
   }
   
   @keyframes orbit1 {
-    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
   }
   
   @keyframes orbit2 {
+    from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit3 {
     from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
     to { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
   }
   
   @keyframes pulseGlow {
     0%, 100% { 
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
       transform: scale(1);
     }
+    33% { 
+      box-shadow: 0 0 30px hsl(var(--accent) / 0.5);
+      transform: scale(1.03);
+    }
+    66% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+      transform: scale(0.97);
+    }
+  }
+  
+  @keyframes waveMotion {
+    0%, 100% { 
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% { 
+      transform: translateY(-15px) translateX(10px) rotate(2deg);
+    }
     50% { 
-      box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
-      transform: scale(1.05);
+      transform: translateY(-5px) translateX(-5px) rotate(-1deg);
+    }
+    75% { 
+      transform: translateY(-20px) translateX(15px) rotate(3deg);
+    }
+  }
+  
+  @keyframes particleFloat {
+    0%, 100% { 
+      transform: translateY(0px) scale(1);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: translateY(-30px) scale(1.1);
+      opacity: 0.8;
     }
   }
 
