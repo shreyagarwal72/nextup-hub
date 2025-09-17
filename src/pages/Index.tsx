@@ -36,7 +36,7 @@ const Index = () => {
     {
       title: "First Website",
       description: "My journey begins here - the first step in web development",
-      url: "https://shreyagarwal72.github.io",
+      url: "https://shreyagarwal72.github.io/home.html",
       icon: Code2,
       category: "Legacy"
     }
@@ -98,19 +98,15 @@ const Index = () => {
             </div>
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <Button 
-                variant="outline" 
-                className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group"
-                onClick={() => {
-                  const phoneNumber = "919412104618";
-                  const message = encodeURIComponent("Hello! I found your portfolio website and would like to get in touch.");
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-                  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-                }}
+              <a 
+                href="https://wa.me/919412104618" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground inline-flex h-9 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
               >
                 <MessageCircle className="h-4 w-4 group-hover:scale-110 transition-transform" />
                 <span className="font-medium">WhatsApp</span>
-              </Button>
+              </a>
             </div>
           </nav>
         </header>
