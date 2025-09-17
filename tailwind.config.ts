@@ -123,6 +123,14 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.9) translateY(20px)" },
           "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
         },
+        "gridMove": {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(50px, 50px)" },
+        },
+        "backgroundPulse": {
+          "0%, 100%": { opacity: "1", transform: "scale(1)" },
+          "50%": { opacity: "0.8", transform: "scale(1.1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,6 +141,8 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out",
         "slide-up": "slide-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
         "fade-in-scale": "fade-in-scale 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "gridMove": "gridMove 20s linear infinite",
+        "backgroundPulse": "backgroundPulse 20s ease-in-out infinite",
       },
     },
   },

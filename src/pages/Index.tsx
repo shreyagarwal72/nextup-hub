@@ -43,17 +43,36 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-secondary relative overflow-hidden">
-      {/* Enhanced animated background elements */}
+    <div className="min-h-screen animated-bg relative overflow-hidden">
+      {/* Professional Motion Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-80 h-80 bg-primary/30 rounded-full blur-3xl floating depth-1"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/25 rounded-full blur-3xl floating-slow depth-1"></div>
-        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-primary/20 rounded-full blur-2xl floating depth-1" style={{ animationDelay: "4s" }}></div>
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-accent/15 rounded-full blur-3xl floating-slow depth-1" style={{ animationDelay: "6s" }}></div>
+        {/* Primary floating orbs with enhanced motion */}
+        <div className="absolute top-20 left-10 w-80 h-80 bg-primary/25 rounded-full blur-3xl floating pulse-glow depth-1"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl floating-slow pulse-glow depth-1" style={{ animationDelay: "3s" }}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary/15 rounded-full blur-2xl floating motion-blur depth-1" style={{ animationDelay: "6s" }}></div>
         
-        {/* Geometric shapes for extra depth */}
-        <div className="absolute top-20 right-20 w-32 h-32 border border-primary/20 rounded-lg rotate-45 floating depth-2"></div>
-        <div className="absolute bottom-40 left-20 w-24 h-24 border border-accent/20 rounded-full floating-slow depth-2" style={{ animationDelay: "3s" }}></div>
+        {/* Orbiting elements */}
+        <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full orbit-1 depth-2"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-accent rounded-full orbit-2 depth-2"></div>
+        
+        {/* Geometric motion shapes */}
+        <div className="absolute top-32 right-32 w-24 h-24 border border-primary/30 rounded-lg rotate-45 floating pulse-glow depth-2" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute bottom-40 left-32 w-16 h-16 border border-accent/30 rounded-full floating-slow pulse-glow depth-2" style={{ animationDelay: "4s" }}></div>
+        
+        {/* Animated grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(hsl(var(--primary)) 1px, transparent 1px),
+              linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'gridMove 20s linear infinite'
+          }}></div>
+        </div>
+        
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 motion-blur"></div>
       </div>
 
       <div className="relative z-10 depth-3">
