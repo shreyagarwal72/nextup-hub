@@ -68,10 +68,13 @@ export default {
         "glow": "var(--shadow-glow)",
         "card": "var(--shadow-card)",
         "3d": "var(--shadow-3d)",
+        "deep": "var(--shadow-deep)",
+        "inner": "var(--shadow-inner)",
       },
       transitionTimingFunction: {
         "smooth": "cubic-bezier(0.4, 0, 0.2, 1)",
         "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
+        "elastic": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -96,8 +99,13 @@ export default {
           },
         },
         "floating": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
+          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
+          "33%": { transform: "translateY(-15px) rotate(1deg)" },
+          "66%": { transform: "translateY(-25px) rotate(-1deg)" },
+        },
+        "floating-slow": {
+          "0%, 100%": { transform: "translateY(0px) rotate(0deg) scale(1)" },
+          "50%": { transform: "translateY(-30px) rotate(2deg) scale(1.05)" },
         },
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
@@ -107,18 +115,24 @@ export default {
           "0%": { opacity: "0", transform: "translateX(100px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
-        "glow-pulse": {
-          "0%, 100%": { boxShadow: "var(--shadow-glow)" },
-          "50%": { boxShadow: "var(--shadow-3d)" },
+        "slide-up": {
+          "0%": { opacity: "0", transform: "translateY(60px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in-scale": {
+          "0%": { opacity: "0", transform: "scale(0.9) translateY(20px)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "floating": "floating 6s ease-in-out infinite",
+        "floating": "floating 8s ease-in-out infinite",
+        "floating-slow": "floating-slow 12s ease-in-out infinite",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in-right": "slide-in-right 0.6s ease-out",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "slide-up": "slide-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "fade-in-scale": "fade-in-scale 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       },
     },
   },

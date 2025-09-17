@@ -43,85 +43,94 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-secondary relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Enhanced animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl floating"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl floating" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-primary/10 rounded-full blur-2xl floating" style={{ animationDelay: "4s" }}></div>
+        <div className="absolute top-10 left-10 w-80 h-80 bg-primary/30 rounded-full blur-3xl floating depth-1"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/25 rounded-full blur-3xl floating-slow depth-1"></div>
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-primary/20 rounded-full blur-2xl floating depth-1" style={{ animationDelay: "4s" }}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-accent/15 rounded-full blur-3xl floating-slow depth-1" style={{ animationDelay: "6s" }}></div>
+        
+        {/* Geometric shapes for extra depth */}
+        <div className="absolute top-20 right-20 w-32 h-32 border border-primary/20 rounded-lg rotate-45 floating depth-2"></div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 border border-accent/20 rounded-full floating-slow depth-2" style={{ animationDelay: "3s" }}></div>
       </div>
 
-      <div className="relative z-10">
-        {/* Header */}
+      <div className="relative z-10 depth-3">
+        {/* Enhanced Header */}
         <header className="container mx-auto px-6 py-8">
-          <nav className="flex items-center justify-between">
-            <div className="gradient-text text-2xl font-bold">
+          <nav className="nav-glass rounded-2xl px-8 py-4 flex items-center justify-between depth-4">
+            <div className="gradient-text text-3xl font-bold">
               Nextup Studio
             </div>
-            <Button variant="outline" className="glass">
+            <Button variant="outline" className="glass-pro border-primary/30 hover:bg-primary/10 transition-elastic">
               Contact
             </Button>
           </nav>
         </header>
 
-        {/* Hero Section */}
-        <section className="container mx-auto px-6 py-20 text-center">
-          <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+        {/* Enhanced Hero Section */}
+        <section className="container mx-auto px-6 py-24 text-center">
+          <div className="max-w-5xl mx-auto fade-in-scale">
+            <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-tight">
               Welcome to{" "}
-              <span className="gradient-text">Nextup Studio</span>
+              <span className="gradient-text block mt-4">Nextup Studio</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Discover our collection of professional websites, tools, and creative projects. 
-              Each site represents a unique aspect of our digital craftsmanship.
+            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+              Discover our collection of professional websites, innovative tools, and creative projects. 
+              Each platform represents a unique aspect of our digital craftsmanship and technical excellence.
             </p>
-            <Button size="lg" className="btn-hero text-lg px-8 py-4">
+            <Button size="lg" className="btn-hero text-lg px-12 py-6 rounded-2xl">
               Explore Our Work
-              <ExternalLink className="ml-2 h-5 w-5" />
+              <ExternalLink className="ml-3 h-6 w-6" />
             </Button>
           </div>
         </section>
 
-        {/* Websites Grid */}
-        <section className="container mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Digital Portfolio</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Explore our diverse collection of websites and applications, each crafted with precision and creativity.
+        {/* Enhanced Websites Grid */}
+        <section className="container mx-auto px-6 py-24">
+          <div className="text-center mb-20 slide-up">
+            <h2 className="text-5xl font-bold mb-6 gradient-text">Our Digital Portfolio</h2>
+            <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
+              Explore our diverse collection of websites and applications, each crafted with precision, 
+              creativity, and cutting-edge technology to deliver exceptional user experiences.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 max-w-8xl mx-auto">
             {websites.map((site, index) => {
               const Icon = site.icon;
               return (
                 <Card 
                   key={site.title} 
-                  className="card-3d tilt-effect group cursor-pointer border-0"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="card-3d tilt-effect group cursor-pointer border-0 rounded-3xl overflow-hidden depth-2"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                   onClick={() => window.open(site.url, '_blank')}
                 >
-                  <CardHeader className="space-y-4">
+                  <CardHeader className="space-y-6 p-8">
                     <div className="flex items-center justify-between">
-                      <div className="p-3 bg-gradient-primary rounded-xl">
-                        <Icon className="h-6 w-6 text-white" />
+                      <div className="p-4 bg-gradient-primary rounded-2xl shadow-glow">
+                        <Icon className="h-8 w-8 text-white" />
                       </div>
-                      <span className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-medium">
+                      <span className="text-sm bg-accent/20 text-accent px-4 py-2 rounded-full font-semibold tracking-wide">
                         {site.category}
                       </span>
                     </div>
-                    <div>
-                      <CardTitle className="text-xl mb-2 group-hover:gradient-text transition-all duration-300">
+                    <div className="space-y-3">
+                      <CardTitle className="text-2xl mb-3 group-hover:gradient-text transition-all duration-500">
                         {site.title}
                       </CardTitle>
-                      <CardDescription className="text-muted-foreground">
+                      <CardDescription className="text-muted-foreground text-base leading-relaxed">
                         {site.description}
                       </CardDescription>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <Button variant="secondary" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <CardContent className="p-8 pt-0">
+                    <Button 
+                      variant="secondary" 
+                      className="w-full group-hover:bg-gradient-primary group-hover:text-white transition-all duration-500 py-3 rounded-xl"
+                    >
                       Visit Website
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                      <ExternalLink className="ml-3 h-5 w-5" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -130,37 +139,45 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="container mx-auto px-6 py-20">
-          <div className="glass rounded-3xl p-8 md:p-16 text-center">
-            <h3 className="text-3xl font-bold mb-8">Our Impact</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="animate-glow-pulse">
-                <div className="text-4xl font-bold gradient-text mb-2">5+</div>
-                <p className="text-muted-foreground">Active Websites</p>
+        {/* Enhanced Stats Section */}
+        <section className="container mx-auto px-6 py-24">
+          <div className="glass-pro rounded-3xl p-12 md:p-20 text-center depth-2 tilt-effect">
+            <h3 className="text-4xl font-bold mb-12 gradient-text">Our Impact & Excellence</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="fade-in-scale group">
+                <div className="text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-elastic">5+</div>
+                <p className="text-muted-foreground text-lg">Active Websites</p>
+                <p className="text-sm text-muted-foreground/70 mt-2">Professional platforms serving users globally</p>
               </div>
-              <div className="animate-glow-pulse" style={{ animationDelay: "0.5s" }}>
-                <div className="text-4xl font-bold gradient-text mb-2">100%</div>
-                <p className="text-muted-foreground">Responsive Design</p>
+              <div className="fade-in-scale group" style={{ animationDelay: "0.3s" }}>
+                <div className="text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-elastic">100%</div>
+                <p className="text-muted-foreground text-lg">Responsive Design</p>
+                <p className="text-sm text-muted-foreground/70 mt-2">Optimized for all devices and screen sizes</p>
               </div>
-              <div className="animate-glow-pulse" style={{ animationDelay: "1s" }}>
-                <div className="text-4xl font-bold gradient-text mb-2">24/7</div>
-                <p className="text-muted-foreground">Online Availability</p>
+              <div className="fade-in-scale group" style={{ animationDelay: "0.6s" }}>
+                <div className="text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-elastic">24/7</div>
+                <p className="text-muted-foreground text-lg">Online Availability</p>
+                <p className="text-sm text-muted-foreground/70 mt-2">Reliable uptime with global CDN support</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t border-border/20 mt-20">
-          <div className="container mx-auto px-6 py-8">
+        {/* Enhanced Footer */}
+        <footer className="border-t border-border/30 mt-24 depth-1">
+          <div className="container mx-auto px-6 py-12">
             <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="gradient-text text-xl font-bold mb-4 md:mb-0">
+              <div className="gradient-text text-2xl font-bold mb-6 md:mb-0">
                 Nextup Studio
               </div>
-              <p className="text-muted-foreground text-center md:text-right">
-                © 2025 Nextup Studio. All rights reserved.
-              </p>
+              <div className="text-center md:text-right space-y-2">
+                <p className="text-muted-foreground">
+                  © 2025 Nextup Studio. All rights reserved.
+                </p>
+                <p className="text-sm text-muted-foreground/70">
+                  Crafting exceptional digital experiences with passion and precision
+                </p>
+              </div>
             </div>
           </div>
         </footer>
