@@ -46,6 +46,20 @@ const Index = () => {
       url: "https://myyoutube-cyan.vercel.app/",
       icon: Play,
       category: "Media"
+    },
+    {
+      title: "Nextup Tools Work 1",
+      description: "Advanced web development tools and utilities for enhanced productivity",
+      url: "https://nextuptool.vercel.app/",
+      icon: Wrench,
+      category: "Tools"
+    },
+    {
+      title: "Nextup Tools Work 2",
+      description: "Extended collection of professional development tools and resources",
+      url: "https://nextuptool2.vercel.app/",
+      icon: Wrench,
+      category: "Tools"
     }
   ];
 
