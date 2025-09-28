@@ -43,7 +43,7 @@ const Index = () => {
     {
       title: "Premium Vault",
       description: "Exclusive premium resources and content archive",
-      url: "https://nextup-archive.lovable.app/",
+      url: "https://nextup-archive.vercel.app/",
       icon: Archive,
       category: "Premium"
     },
