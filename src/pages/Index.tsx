@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Play } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -39,27 +39,6 @@ const Index = () => {
       url: "https://shreyagarwal72.github.io/home.html",
       icon: Code2,
       category: "Legacy"
-    },
-    {
-      title: "My Youtube",
-      description: "Creative video content and tutorials sharing knowledge and entertainment",
-      url: "https://myyoutube-cyan.vercel.app/",
-      icon: Play,
-      category: "Media"
-    },
-    {
-      title: "Nextup Tools Work 1",
-      description: "Advanced web development tools and utilities for enhanced productivity",
-      url: "https://nextuptool.vercel.app/",
-      icon: Wrench,
-      category: "Tools"
-    },
-    {
-      title: "Nextup Tools Work 2",
-      description: "Extended collection of professional development tools and resources",
-      url: "https://nextuptool2.vercel.app/",
-      icon: Wrench,
-      category: "Tools"
     }
   ];
 
