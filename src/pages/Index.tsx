@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -20,9 +20,23 @@ const Index = () => {
       category: "Gaming"
     },
     {
-      title: "Web Tools",
+      title: "My Youtube",
+      description: "Creative content and tutorials on web development and technology",
+      url: "https://myyoutube-cyan.vercel.app/",
+      icon: Youtube,
+      category: "Content"
+    },
+    {
+      title: "Nextup Tools Work 1",
       description: "Collection of useful web development tools and utilities",
       url: "https://nextuptool.vercel.app/",
+      icon: Wrench,
+      category: "Tools"
+    },
+    {
+      title: "Nextup Tools Work 2",
+      description: "Advanced web development tools and enhanced utilities",
+      url: "https://nextuptool2.vercel.app/",
       icon: Wrench,
       category: "Tools"
     },
