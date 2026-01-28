@@ -10,16 +10,14 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="glass-pro border-primary/30 hover:bg-primary/20 transition-all duration-300 rounded-full w-12 h-12 relative overflow-hidden"
+      className="liquid-glass h-10 w-10 rounded-xl transition-all duration-300 relative overflow-hidden hover:scale-105"
     >
-      <div className="relative w-6 h-6">
-        <Sun className={`h-5 w-5 absolute top-0.5 left-0.5 transition-all duration-300 ${
-          theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'
-        }`} />
-        <Moon className={`h-5 w-5 absolute top-0.5 left-0.5 transition-all duration-300 ${
-          theme === 'light' ? 'rotate-0 scale-100' : '-rotate-90 scale-0'
-        }`} />
-      </div>
+      <Sun className={`h-5 w-5 absolute transition-all duration-500 text-amber-500 ${
+        theme === 'dark' ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'
+      }`} />
+      <Moon className={`h-5 w-5 absolute transition-all duration-500 text-primary ${
+        theme === 'light' ? '-rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'
+      }`} />
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
