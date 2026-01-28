@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -21,21 +20,21 @@ const Index = () => {
     },
     {
       title: "My Youtube",
-      description: "Creative content and tutorials on web development and technology",
+      description: "Creative content and tutorials on web development",
       url: "https://myyoutube-cyan.vercel.app/",
       icon: Youtube,
       category: "Content"
     },
     {
       title: "Nextup Tools Work 1",
-      description: "Collection of useful web development tools and utilities",
+      description: "Collection of useful web development tools",
       url: "https://nextuptool.vercel.app/",
       icon: Wrench,
       category: "Tools"
     },
     {
       title: "Nextup Tools Work 2",
-      description: "Advanced web development tools and enhanced utilities",
+      description: "Advanced web development tools and utilities",
       url: "https://nextuptool2.vercel.app/",
       icon: Wrench,
       category: "Tools"
@@ -49,7 +48,7 @@ const Index = () => {
     },
     {
       title: "First Website",
-      description: "My journey begins here - the first step in web development",
+      description: "My journey begins here - the first step",
       url: "https://shreyagarwal72.github.io/home.html",
       icon: Code2,
       category: "Legacy"
@@ -57,196 +56,148 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen animated-bg relative overflow-hidden">
-      {/* Professional Motion Background with Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Enhanced floating orbs with complex motion */}
-        <div className="absolute top-20 left-10 w-80 h-80 bg-primary/25 rounded-full blur-3xl floating pulse-glow depth-1"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl floating-slow pulse-glow depth-1" style={{ animationDelay: "3s" }}></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary/15 rounded-full blur-2xl wave-motion motion-blur depth-1" style={{ animationDelay: "6s" }}></div>
-        <div className="absolute top-40 right-40 w-64 h-64 bg-accent/18 rounded-full blur-3xl particle-float pulse-glow depth-1" style={{ animationDelay: "9s" }}></div>
-        
-        {/* Multiple orbiting elements with different speeds */}
-        <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-primary rounded-full orbit-1 depth-2 pulse-glow"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-accent rounded-full orbit-2 depth-2 pulse-glow"></div>
-        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-primary/80 rounded-full orbit-3 depth-2" style={{ animationDelay: "5s" }}></div>
-        
-        {/* Floating particles */}
-        <div className="absolute top-1/6 left-1/6 w-1 h-1 bg-primary rounded-full particle-float depth-1" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute bottom-1/6 right-1/6 w-1 h-1 bg-accent rounded-full particle-float depth-1" style={{ animationDelay: "7s" }}></div>
-        <div className="absolute top-2/3 left-1/5 w-1 h-1 bg-primary/70 rounded-full particle-float depth-1" style={{ animationDelay: "4s" }}></div>
-        
-        {/* Enhanced geometric motion shapes */}
-        <div className="absolute top-32 right-32 w-24 h-24 border border-primary/30 rounded-lg rotate-45 wave-motion pulse-glow depth-2" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-40 left-32 w-16 h-16 border border-accent/30 rounded-full floating-slow pulse-glow depth-2" style={{ animationDelay: "4s" }}></div>
-        <div className="absolute top-1/3 right-1/6 w-20 h-20 border-2 border-primary/20 rounded-xl rotate-12 particle-float depth-2" style={{ animationDelay: "8s" }}></div>
-        
-        {/* Enhanced animated grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(hsl(var(--primary) / 0.4) 1px, transparent 1px),
-              linear-gradient(90deg, hsl(var(--primary) / 0.4) 1px, transparent 1px),
-              radial-gradient(circle at 50% 50%, hsl(var(--accent) / 0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px, 40px 40px, 80px 80px',
-            animation: 'gridMove 25s linear infinite'
-          }}></div>
-        </div>
-        
-        {/* Multi-layer gradient overlays with motion */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-transparent to-accent/6 motion-blur"></div>
-        <div className="absolute inset-0 bg-gradient-to-tl from-accent/4 via-primary/3 to-transparent wave-motion" style={{ animationDelay: "10s" }}></div>
-        
-        {/* Animated light rays */}
-        <div className="absolute top-0 left-1/4 w-px h-1/3 bg-gradient-to-b from-primary/30 to-transparent particle-float" style={{ animationDelay: "3s" }}></div>
-        <div className="absolute bottom-0 right-1/3 w-px h-1/4 bg-gradient-to-t from-accent/25 to-transparent wave-motion" style={{ animationDelay: "7s" }}></div>
+    <div className="mesh-bg min-h-screen">
+      {/* Floating Orbs - GPU Optimized */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-[10%] w-72 h-72 bg-primary/20 rounded-full blur-3xl float-slow" />
+        <div className="absolute bottom-32 right-[15%] w-96 h-96 bg-accent/15 rounded-full blur-3xl float-slow" style={{ animationDelay: '-2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 depth-3">
-        {/* Enhanced Header */}
-        <header className="container mx-auto px-6 py-8">
-          <nav className="nav-glass rounded-2xl px-8 py-4 flex items-center justify-between depth-4">
-            <div className="gradient-text text-3xl font-bold">
-              Nextup Studio
+      <div className="relative z-10">
+        {/* Navigation */}
+        <header className="sticky top-0 z-50 px-4 py-4 md:px-8">
+          <nav className="nav-glass max-w-6xl mx-auto rounded-2xl px-6 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-6 w-6 text-primary" />
+              <span className="gradient-text text-xl font-bold tracking-tight">
+                Nextup Studio
+              </span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <ThemeToggle />
               <Button 
-                variant="outline" 
-                className="glass-pro border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 flex items-center gap-3 px-6 py-2 rounded-full group"
+                className="liquid-btn hidden sm:flex items-center gap-2"
                 onClick={() => {
-                  const emailAddress = "sanjayvansu1973@gmail.com";
-                  const subject = "Contact from Nextup Studio Website";
-                  const body = "Hello! I found your Nextup Studio website and would like to get in touch.";
-                  const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                  window.location.href = mailtoUrl;
+                  window.location.href = `mailto:sanjayvansu1973@gmail.com?subject=${encodeURIComponent("Contact from Nextup Studio")}`;
                 }}
               >
-                <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">Email</span>
+                <Mail className="h-4 w-4" />
+                Contact
               </Button>
             </div>
           </nav>
         </header>
 
-        {/* Enhanced Hero Section */}
-        <section className="container mx-auto px-6 py-24 text-center">
-          <div className="max-w-5xl mx-auto fade-in-scale">
-            <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-tight">
-              Welcome to{" "}
-              <span className="gradient-text block mt-4">Nextup Studio</span>
+        {/* Hero Section */}
+        <section className="container mx-auto px-4 py-16 md:py-24 text-center fade-in">
+          <div className="max-w-4xl mx-auto">
+            <div className="liquid-badge inline-flex items-center gap-2 mb-6">
+              <Sparkles className="h-3.5 w-3.5" />
+              Welcome to the future
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+              Crafting Digital
+              <span className="gradient-text block mt-2">Experiences</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-              Discover our collection of professional websites, innovative tools, and creative projects. 
-              Each platform represents a unique aspect of our digital craftsmanship and technical excellence.
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+              Discover our collection of professional websites, innovative tools, and creative projects built with precision and passion.
             </p>
             <Button 
-              size="lg" 
-              className="btn-hero text-lg px-12 py-6 rounded-2xl"
+              className="liquid-btn text-lg px-8 py-6"
               onClick={() => {
-                const portfolioSection = document.getElementById('portfolio-section');
-                portfolioSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               Explore Our Work
-              <ExternalLink className="ml-3 h-6 w-6" />
+              <ExternalLink className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </section>
 
-        {/* Enhanced Websites Grid */}
-        <section id="portfolio-section" className="container mx-auto px-6 py-24">
-          <div className="text-center mb-20 slide-up">
-            <h2 className="text-5xl font-bold mb-6 gradient-text">Our Digital Portfolio</h2>
-            <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
-              Explore our diverse collection of websites and applications, each crafted with precision, 
-              creativity, and cutting-edge technology to deliver exceptional user experiences.
+        {/* Portfolio Grid */}
+        <section id="portfolio" className="container mx-auto px-4 py-16 md:py-24">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              Digital Portfolio
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Each project represents our commitment to quality and innovation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 max-w-8xl mx-auto">
-            {websites.map((site, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto stagger-children">
+            {websites.map((site) => {
               const Icon = site.icon;
               return (
-                <Card 
+                <article 
                   key={site.title} 
-                  className="card-3d tilt-effect group cursor-pointer border-0 rounded-3xl overflow-hidden depth-2"
-                  style={{ animationDelay: `${index * 0.15}s` }}
+                  className="fluid-card p-6 cursor-pointer group"
                   onClick={() => window.open(site.url, '_blank')}
                 >
-                  <CardHeader className="space-y-6 p-8">
-                    <div className="flex items-center justify-between">
-                      <div className="p-4 bg-gradient-primary rounded-2xl shadow-glow">
-                        <Icon className="h-8 w-8 text-white" />
-                      </div>
-                      <span className="text-sm bg-accent/20 text-accent px-4 py-2 rounded-full font-semibold tracking-wide">
-                        {site.category}
-                      </span>
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="icon-glass">
+                      <Icon className="h-6 w-6 text-white" />
                     </div>
-                    <div className="space-y-3">
-                      <CardTitle className="text-2xl mb-3 group-hover:gradient-text transition-all duration-500">
-                        {site.title}
-                      </CardTitle>
-                      <CardDescription className="text-muted-foreground text-base leading-relaxed">
-                        {site.description}
-                      </CardDescription>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-8 pt-0">
-                    <Button 
-                      variant="secondary" 
-                      className="w-full group-hover:bg-gradient-primary group-hover:text-white transition-all duration-500 py-3 rounded-xl"
-                    >
-                      Visit Website
-                      <ExternalLink className="ml-3 h-5 w-5" />
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <span className="liquid-badge">
+                      {site.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    {site.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                    {site.description}
+                  </p>
+                  
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-between hover-lift hover:bg-primary/10 rounded-xl"
+                  >
+                    Visit Website
+                    <ExternalLink className="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity" />
+                  </Button>
+                </article>
               );
             })}
           </div>
         </section>
 
-        {/* Enhanced Stats Section */}
-        <section className="container mx-auto px-6 py-24">
-          <div className="glass-pro rounded-3xl p-12 md:p-20 text-center depth-2 tilt-effect">
-            <h3 className="text-4xl font-bold mb-12 gradient-text">Our Impact & Excellence</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="fade-in-scale group">
-                <div className="text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-elastic">5+</div>
-                <p className="text-muted-foreground text-lg">Active Websites</p>
-                <p className="text-sm text-muted-foreground/70 mt-2">Professional platforms serving users globally</p>
+        {/* Stats Section */}
+        <section className="container mx-auto px-4 py-16 md:py-24">
+          <div className="stats-glass max-w-5xl mx-auto p-8 md:p-14">
+            <h3 className="text-2xl md:text-3xl font-bold mb-10 text-center gradient-text">
+              Our Impact
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-2">
+                <div className="text-4xl md:text-5xl font-bold gradient-text">5+</div>
+                <p className="text-muted-foreground font-medium">Active Projects</p>
               </div>
-              <div className="fade-in-scale group" style={{ animationDelay: "0.3s" }}>
-                <div className="text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-elastic">100%</div>
-                <p className="text-muted-foreground text-lg">Responsive Design</p>
-                <p className="text-sm text-muted-foreground/70 mt-2">Optimized for all devices and screen sizes</p>
+              <div className="space-y-2">
+                <div className="text-4xl md:text-5xl font-bold gradient-text">100%</div>
+                <p className="text-muted-foreground font-medium">Responsive Design</p>
               </div>
-              <div className="fade-in-scale group" style={{ animationDelay: "0.6s" }}>
-                <div className="text-6xl font-bold gradient-text mb-4 group-hover:scale-110 transition-elastic">24/7</div>
-                <p className="text-muted-foreground text-lg">Online Availability</p>
-                <p className="text-sm text-muted-foreground/70 mt-2">Reliable uptime with global CDN support</p>
+              <div className="space-y-2">
+                <div className="text-4xl md:text-5xl font-bold gradient-text">24/7</div>
+                <p className="text-muted-foreground font-medium">Online Availability</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Enhanced Footer */}
-        <footer className="border-t border-border/30 mt-24 depth-1">
-          <div className="container mx-auto px-6 py-12">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="gradient-text text-2xl font-bold mb-6 md:mb-0">
-                Nextup Studio
+        {/* Footer */}
+        <footer className="border-t border-border/40">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-primary" />
+                <span className="gradient-text font-semibold">Nextup Studio</span>
               </div>
-              <div className="text-center md:text-right space-y-2">
-                <p className="text-muted-foreground">
-                  © 2025 Nextup Studio. All rights reserved.
-                </p>
-                <p className="text-sm text-muted-foreground/70">
-                  Crafting exceptional digital experiences with passion and precision
-                </p>
-              </div>
+              <p className="text-muted-foreground text-sm text-center">
+                © 2025 Nextup Studio. All rights reserved.
+              </p>
             </div>
           </div>
         </footer>
