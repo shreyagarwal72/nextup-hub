@@ -52,6 +52,20 @@ const Index = () => {
       url: "https://shreyagarwal72.github.io/home.html",
       icon: Code2,
       category: "Legacy"
+    },
+    {
+      title: "Nextup Resources",
+      description: "Educational resources and learning materials for developers",
+      url: "https://nextup-resource.vercel.app",
+      icon: Globe,
+      category: "Education"
+    },
+    {
+      title: "Orbital World",
+      description: "Explore the cosmic universe and orbital mechanics",
+      url: "https://orbital-world.vercel.app",
+      icon: Globe,
+      category: "Space"
     }
   ];
 
