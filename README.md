@@ -1,66 +1,80 @@
-# Professional Portfolio Website
+# Nextup Studio - Digital Portfolio Hub
 
-A modern, responsive portfolio website showcasing digital craftsmanship and technical excellence. Built with cutting-edge web technologies to deliver exceptional user experiences across all devices.
+A modern, high-performance portfolio website showcasing Nextup Studio's collection of digital projects. Built with iOS 26 Liquid Glass UI design system featuring smooth animations, glassmorphism effects, and seamless light/dark theme support.
 
-## 🚀 About This Project
+## 🌐 Live Website
 
-This portfolio represents a collection of professional websites, innovative tools, and creative projects. Each platform demonstrates unique aspects of digital development expertise, from sleek user interfaces to robust backend solutions.
+**[nextup-hub.lovable.app](https://nextup-hub.lovable.app)**
 
-## ✨ Key Features
+## ✨ Featured Projects
 
-- **Modern Design System**: Comprehensive design tokens with light/dark theme support
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices  
-- **Advanced Animations**: Smooth transitions and interactive elements
-- **Professional Showcase**: Curated collection of digital projects and achievements
-- **Contact Integration**: Direct email communication for business inquiries
-- **Performance Optimized**: Fast loading times and smooth user experience
+| Project | Category | Description |
+|---------|----------|-------------|
+| **Main Portfolio** | Portfolio | Professional portfolio showcasing expertise |
+| **Minecraft Studio** | Gaming | Creative Minecraft projects and builds |
+| **My Youtube** | Content | Web development tutorials and creative content |
+| **Nextup Tools 1 & 2** | Tools | Collection of useful web development utilities |
+| **Premium Vault** | Premium | Exclusive premium resources archive |
+| **Nextup Resources** | Education | Learning materials for developers |
+| **Orbital World** | Space | Cosmic universe and orbital mechanics explorer |
+| **First Website** | Legacy | The journey's beginning |
 
-## 🛠️ Built With
+## 🎨 Design System
 
-- **React 18** - Modern component-based architecture
+### iOS 26 Liquid Glass UI
+- **Glassmorphism**: Backdrop blur with saturate effects
+- **Fluid Cards**: GPU-accelerated hover animations
+- **Mesh Backgrounds**: Dynamic gradient overlays
+- **Liquid Buttons**: Gradient fills with glow effects
+- **Smooth Transitions**: 60fps animations throughout
+
+### Theme Support
+- Light mode with subtle glass effects
+- Dark mode with enhanced glow and contrast
+- Seamless theme switching with CSS transitions
+
+## 🛠️ Tech Stack
+
+- **React 18** - Component architecture
 - **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling with custom design system
-- **Vite** - Lightning-fast build tool and development server
-- **Shadcn/UI** - Beautiful, accessible component library
+- **Tailwind CSS** - Utility-first styling with custom design tokens
+- **Vite** - Lightning-fast builds
+- **Shadcn/UI** - Accessible component library
+- **Lucide Icons** - Beautiful iconography
 
-## 📞 Contact Information
+## 🚀 Performance Optimizations
 
-For professional inquiries and collaboration opportunities:
-- **Email**: sanjayvansu1973@gmail.com
+- CSS-only animations for reduced CPU overhead
+- `will-change` hints for GPU acceleration
+- Optimized backdrop-filter usage
+- Lazy-loaded components
+- Minimal JavaScript bundle
 
-## 🎯 Professional Services
+## 📧 Contact
 
-Specializing in:
-- Custom website development
-- Digital platform solutions  
-- Creative web applications
-- Technical consultation
-- UI/UX design implementation
+**Email**: sanjayvansu1973@gmail.com
 
-For local development:
+## 🔧 Development
 
-```sh
-# Clone the repository
-git clone <YOUR_GIT_URL>
-
-# Navigate to project directory
-cd <YOUR_PROJECT_NAME>
-
+```bash
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-## 🚀 Deployment
+## 📱 Responsive Design
 
-Deploy instantly using Lovable's built-in hosting or connect to your preferred deployment platform.
-
-## 🌐 Custom Domain
-
-Professional custom domain setup available through project settings for a polished, branded web presence.
+Fully optimized for:
+- Desktop (1920px+)
+- Laptop (1366px)
+- Tablet (768px)
+- Mobile (375px)
 
 ---
 
-*Built with passion for exceptional digital experiences*
+*Crafted with passion by Nextup Studio • © 2025*
