@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User, Briefcase } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
@@ -8,7 +8,7 @@ const Index = () => {
       title: "Main Portfolio",
       description: "Professional portfolio showcasing my work and expertise",
       url: "https://vanshubhai.vercel.app",
-      icon: Globe,
+      icon: User,
       category: "Portfolio"
     },
     {
@@ -57,14 +57,14 @@ const Index = () => {
       title: "Nextup Resources",
       description: "Educational resources and learning materials for developers",
       url: "https://nextup-resource.vercel.app",
-      icon: Globe,
+      icon: GraduationCap,
       category: "Education"
     },
     {
       title: "Orbital World",
       description: "Explore the cosmic universe and orbital mechanics",
       url: "https://orbital-world.vercel.app",
-      icon: Globe,
+      icon: Rocket,
       category: "Space"
     }
   ];
