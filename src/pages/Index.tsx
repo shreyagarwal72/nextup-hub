@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
+import { ExternalLink, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { TypewriterText } from "@/components/TypewriterText";
+import MagneticCursor from "@/components/MagneticCursor";
+import ParallaxOrbs from "@/components/ParallaxOrbs";
+
 const Index = () => {
   const websites = [
     {
@@ -71,18 +74,14 @@ const Index = () => {
 
   return (
     <div className="mesh-bg min-h-screen">
-      {/* Floating Orbs - GPU Optimized */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-[10%] w-72 h-72 bg-primary/20 rounded-full blur-3xl float-slow" />
-        <div className="absolute bottom-32 right-[15%] w-96 h-96 bg-accent/15 rounded-full blur-3xl float-slow" style={{ animationDelay: '-2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl" />
-      </div>
+      <MagneticCursor />
+      <ParallaxOrbs />
 
       <div className="relative z-10">
         {/* Navigation */}
         <header className="sticky top-0 z-50 px-4 py-4 md:px-8">
           <nav className="nav-glass max-w-6xl mx-auto rounded-2xl px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2" data-magnetic>
               <Sparkles className="h-6 w-6 text-primary" />
               <span className="gradient-text text-xl font-bold tracking-tight">
                 Nextup Studio
@@ -92,6 +91,7 @@ const Index = () => {
               <ThemeToggle />
               <Button 
                 className="liquid-btn hidden sm:flex items-center gap-2"
+                data-magnetic
                 onClick={() => {
                   window.location.href = `mailto:sanjayvansu1973@gmail.com?subject=${encodeURIComponent("Contact from Nextup Studio")}`;
                 }}
@@ -126,6 +126,7 @@ const Index = () => {
             </p>
             <Button 
               className="liquid-btn text-lg px-8 py-6"
+              data-magnetic
               onClick={() => {
                 document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
               }}
@@ -154,13 +155,14 @@ const Index = () => {
                 <article 
                   key={site.title} 
                   className="fluid-card p-6 cursor-pointer group"
+                  data-magnetic
                   onClick={() => window.open(site.url, '_blank')}
                 >
                   <div className="flex items-start justify-between mb-5">
-                    <div className="icon-glass">
+                    <div className="icon-glass pulse-glow">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
-                    <span className="liquid-badge">
+                    <span className="liquid-badge shimmer">
                       {site.category}
                     </span>
                   </div>
@@ -192,15 +194,15 @@ const Index = () => {
               Our Impact
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2" data-magnetic>
                 <div className="text-4xl md:text-5xl font-bold gradient-text">5+</div>
                 <p className="text-muted-foreground font-medium">Active Projects</p>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2" data-magnetic>
                 <div className="text-4xl md:text-5xl font-bold gradient-text">100%</div>
                 <p className="text-muted-foreground font-medium">Responsive Design</p>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2" data-magnetic>
                 <div className="text-4xl md:text-5xl font-bold gradient-text">24/7</div>
                 <p className="text-muted-foreground font-medium">Online Availability</p>
               </div>
@@ -217,6 +219,7 @@ const Index = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+                data-magnetic
               >
                 <Sparkles className="h-5 w-5 text-primary" />
                 <span className="gradient-text font-semibold hover:opacity-80 transition-opacity">Nextup Studio</span>
