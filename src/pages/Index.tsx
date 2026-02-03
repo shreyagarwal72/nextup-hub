@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User, Briefcase } from "lucide-react";
+import { ExternalLink, Globe, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
-
+import { TypewriterText } from "@/components/TypewriterText";
 const Index = () => {
   const websites = [
     {
@@ -112,7 +112,14 @@ const Index = () => {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
               Crafting Digital
-              <span className="gradient-text block mt-2">Experiences</span>
+              <span className="gradient-text block mt-2">
+                <TypewriterText 
+                  words={["Experiences", "Solutions", "Innovations", "Excellence"]} 
+                  typingSpeed={120}
+                  deletingSpeed={60}
+                  pauseDuration={2500}
+                />
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
               Discover our collection of professional websites, innovative tools, and creative projects built with precision and passion.
@@ -205,10 +212,15 @@ const Index = () => {
         <footer className="border-t border-border/40">
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-2">
+              <a 
+                href="https://nextup-studio.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 cursor-pointer"
+              >
                 <Sparkles className="h-5 w-5 text-primary" />
-                <span className="gradient-text font-semibold">Nextup Studio</span>
-              </div>
+                <span className="gradient-text font-semibold hover:opacity-80 transition-opacity">Nextup Studio</span>
+              </a>
               <p className="text-muted-foreground text-sm text-center">
                 © 2025 Nextup Studio. All rights reserved.
               </p>
