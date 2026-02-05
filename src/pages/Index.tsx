@@ -7,6 +7,7 @@ import ParallaxOrbs from "@/components/ParallaxOrbs";
 import { useTheme } from "@/components/ThemeProvider";
 
 const Index = () => {
+  const { designMode, toggleDesignMode } = useTheme();
   const websites = [
     {
       title: "Main Portfolio",
