@@ -43,13 +43,6 @@ const Index = () => {
       category: "Tools"
     },
     {
-      title: "Premium Vault",
-      description: "Exclusive premium resources and content archive",
-      url: "https://nextup-archive.vercel.app/",
-      icon: Archive,
-      category: "Premium"
-    },
-    {
       title: "First Website",
       description: "My journey begins here - the first step",
       url: "https://shreyagarwal72.github.io/home.html",

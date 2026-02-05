@@ -58,23 +58,23 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: 230 15% 5%;
+    --foreground: 210 20% 95%;
 
-    --card: 224 71% 7%;
-    --card-foreground: 213 31% 91%;
+    --card: 230 15% 8%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 224 71% 7%;
-    --popover-foreground: 213 31% 91%;
+    --popover: 230 15% 8%;
+    --popover-foreground: 210 20% 95%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 47% 11%;
-    --secondary-foreground: 213 31% 91%;
+    --secondary: 230 12% 14%;
+    --secondary-foreground: 210 20% 90%;
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215 16% 57%;
+    --muted: 230 10% 14%;
+    --muted-foreground: 215 12% 55%;
 
     --accent: 263 70% 65%;
     --accent-foreground: 0 0% 100%;
@@ -82,29 +82,140 @@
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 230 12% 18%;
+    --input: 230 12% 18%;
     --ring: 217 91% 60%;
 
-    /* iOS Liquid Glass Dark */
-    --glass-bg: rgba(15, 20, 30, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-highlight: rgba(255, 255, 255, 0.06);
-    --glass-shadow: rgba(0, 0, 0, 0.5);
+    /* iOS Liquid Glass Dark - High Contrast */
+    --glass-bg: rgba(10, 12, 20, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-highlight: rgba(255, 255, 255, 0.04);
+    --glass-shadow: rgba(0, 0, 0, 0.6);
     --glass-blur: 50px;
     
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(263 70% 65%) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(25,30,40,0.85) 0%, rgba(15,20,30,0.6) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(18,20,30,0.9) 0%, rgba(10,12,20,0.7) 100%);
     --gradient-mesh: 
-      radial-gradient(at 40% 20%, hsl(217 91% 60% / 0.15) 0px, transparent 50%),
-      radial-gradient(at 80% 0%, hsl(263 70% 65% / 0.12) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsl(217 91% 60% / 0.1) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsl(263 70% 65% / 0.08) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsl(217 91% 60% / 0.1) 0px, transparent 50%);
+      radial-gradient(at 40% 20%, hsl(217 91% 60% / 0.12) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(263 70% 65% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(217 91% 60% / 0.08) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(263 70% 65% / 0.06) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(217 91% 60% / 0.08) 0px, transparent 50%);
     
-    --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.35);
-    --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.45);
-    --shadow-glow: 0 0 60px hsl(217 91% 60% / 0.25);
+    --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.5);
+    --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 60px hsl(217 91% 60% / 0.2);
+  }
+
+  /* Material 3 Expressive Light Theme */
+  .m3-expressive {
+    --background: 300 20% 98%;
+    --foreground: 280 30% 12%;
+
+    --card: 300 15% 100%;
+    --card-foreground: 280 30% 12%;
+
+    --popover: 300 15% 100%;
+    --popover-foreground: 280 30% 12%;
+
+    --primary: 280 67% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 60% 94%;
+    --secondary-foreground: 280 30% 12%;
+
+    --muted: 300 15% 94%;
+    --muted-foreground: 280 10% 45%;
+
+    --accent: 340 75% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 300 20% 88%;
+    --input: 300 20% 88%;
+    --ring: 280 67% 55%;
+
+    --radius: 1.75rem;
+
+    --glass-bg: rgba(255, 240, 255, 0.8);
+    --glass-border: rgba(200, 140, 220, 0.3);
+    --glass-highlight: rgba(255, 255, 255, 0.95);
+    --glass-shadow: rgba(140, 80, 160, 0.08);
+    --glass-blur: 40px;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(280 67% 55%) 0%, hsl(340 75% 58%) 50%, hsl(30 90% 60%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,240,255,0.95) 0%, rgba(255,230,240,0.7) 100%);
+    --gradient-mesh: 
+      radial-gradient(at 40% 20%, hsl(280 67% 55% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(340 75% 58% / 0.12) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(30 90% 60% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(280 67% 55% / 0.08) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(340 75% 58% / 0.1) 0px, transparent 50%);
+    
+    --shadow-soft: 0 4px 24px rgba(140, 80, 160, 0.1);
+    --shadow-medium: 0 8px 40px rgba(140, 80, 160, 0.15);
+    --shadow-glow: 0 0 50px hsl(280 67% 55% / 0.25);
+
+    /* M3 Expressive specific */
+    --m3-container-low: 300 15% 96%;
+    --m3-container-high: 300 20% 92%;
+    --m3-on-surface-variant: 280 10% 40%;
+  }
+
+  /* Material 3 Expressive Dark Theme */
+  .m3-expressive.dark {
+    --background: 280 25% 6%;
+    --foreground: 300 15% 92%;
+
+    --card: 280 20% 10%;
+    --card-foreground: 300 15% 92%;
+
+    --popover: 280 20% 10%;
+    --popover-foreground: 300 15% 92%;
+
+    --primary: 280 80% 72%;
+    --primary-foreground: 280 40% 12%;
+
+    --secondary: 280 20% 18%;
+    --secondary-foreground: 300 15% 90%;
+
+    --muted: 280 15% 15%;
+    --muted-foreground: 280 10% 55%;
+
+    --accent: 340 80% 70%;
+    --accent-foreground: 340 40% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 15% 20%;
+    --input: 280 15% 20%;
+    --ring: 280 80% 72%;
+
+    --glass-bg: rgba(20, 10, 30, 0.85);
+    --glass-border: rgba(180, 120, 220, 0.12);
+    --glass-highlight: rgba(255, 255, 255, 0.04);
+    --glass-shadow: rgba(0, 0, 0, 0.6);
+    --glass-blur: 40px;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(280 80% 72%) 0%, hsl(340 80% 70%) 50%, hsl(30 80% 65%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(30,15,45,0.9) 0%, rgba(20,10,30,0.7) 100%);
+    --gradient-mesh: 
+      radial-gradient(at 40% 20%, hsl(280 80% 72% / 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(340 80% 70% / 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(30 80% 65% / 0.08) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(280 80% 72% / 0.06) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(340 80% 70% / 0.08) 0px, transparent 50%);
+    
+    --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.5);
+    --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 60px hsl(280 80% 72% / 0.2);
+
+    --m3-container-low: 280 20% 8%;
+    --m3-container-high: 280 20% 12%;
+    --m3-on-surface-variant: 280 10% 60%;
   }
 
   * {
