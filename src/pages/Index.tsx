@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
+import { ExternalLink, Code2, Wrench, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { TypewriterText } from "@/components/TypewriterText";
 import MagneticCursor from "@/components/MagneticCursor";
 import ParallaxOrbs from "@/components/ParallaxOrbs";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Index = () => {
   const websites = [
