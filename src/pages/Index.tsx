@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Code2, Wrench, Archive, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
+import { ExternalLink, Code2, Wrench, Gamepad2, Mail, Youtube, Sparkles, GraduationCap, Rocket, User } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { TypewriterText } from "@/components/TypewriterText";
 import MagneticCursor from "@/components/MagneticCursor";
 import ParallaxOrbs from "@/components/ParallaxOrbs";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Index = () => {
+  const { designMode, toggleDesignMode } = useTheme();
   const websites = [
     {
       title: "Main Portfolio",
@@ -41,13 +43,6 @@ const Index = () => {
       url: "https://nextuptool2.vercel.app/",
       icon: Wrench,
       category: "Tools"
-    },
-    {
-      title: "Premium Vault",
-      description: "Exclusive premium resources and content archive",
-      url: "https://nextup-archive.vercel.app/",
-      icon: Archive,
-      category: "Premium"
     },
     {
       title: "First Website",
@@ -224,9 +219,24 @@ const Index = () => {
                 <Sparkles className="h-5 w-5 text-primary" />
                 <span className="gradient-text font-semibold hover:opacity-80 transition-opacity">Nextup Studio</span>
               </a>
-              <p className="text-muted-foreground text-sm text-center">
-                © 2025 Nextup Studio. All rights reserved.
-              </p>
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={toggleDesignMode}
+                  className="group flex items-center gap-1.5 px-3 py-1.5 rounded-full liquid-badge transition-all duration-500 hover:scale-105"
+                  data-magnetic
+                  title={designMode === 'alpha' ? 'Switch to Material 3 Expressive theme' : 'Switch to default theme'}
+                >
+                  <span className="text-xs font-bold tracking-wider uppercase">
+                    {designMode === 'alpha' ? 'β' : 'α'}
+                  </span>
+                  <span className="text-[10px] font-medium opacity-70">
+                    {designMode === 'alpha' ? 'Beta' : 'Alpha'}
+                  </span>
+                </button>
+                <p className="text-muted-foreground text-sm text-center">
+                  © 2025 Nextup Studio. All rights reserved.
+                </p>
+              </div>
             </div>
           </div>
         </footer>
