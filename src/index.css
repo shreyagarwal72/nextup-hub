@@ -570,4 +570,108 @@
     50% { transform: rotate(180deg) scale(1.1); }
     100% { transform: rotate(360deg) scale(1); }
   }
+
+  /* Material 3 Expressive Overrides */
+  .m3-expressive .fluid-card {
+    border-radius: 1.75rem;
+    border: 1px solid hsl(var(--border));
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease;
+  }
+
+  .m3-expressive .fluid-card:hover {
+    transform: translateY(-10px) scale(1.03) rotate(0.5deg);
+    border-color: hsl(var(--primary) / 0.4);
+  }
+
+  .m3-expressive .liquid-btn {
+    border-radius: 2rem;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .m3-expressive .liquid-btn:hover {
+    transform: translateY(-4px) scale(1.06);
+    box-shadow: 0 8px 30px hsl(var(--primary) / 0.4);
+  }
+
+  .m3-expressive .liquid-badge {
+    border-radius: 2rem;
+    background: hsl(var(--primary) / 0.12);
+    border: 1.5px solid hsl(var(--primary) / 0.25);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .m3-expressive .icon-glass {
+    border-radius: 1.25rem;
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 20px hsl(var(--primary) / 0.3);
+  }
+
+  .m3-expressive .nav-glass {
+    border-radius: 2rem;
+    border: 1.5px solid hsl(var(--border));
+  }
+
+  .m3-expressive .stats-glass {
+    border-radius: 2.5rem;
+    border: 1.5px solid hsl(var(--border));
+  }
+
+  .m3-expressive .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* M3 spring animation for cards */
+  .m3-expressive .stagger-children > * {
+    animation: m3StaggerIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  @keyframes m3StaggerIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.92);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .m3-expressive .fade-in {
+    animation: m3FadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  @keyframes m3FadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.93);
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .m3-expressive .pulse-glow {
+    animation: m3PulseGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes m3PulseGlow {
+    0%, 100% { 
+      box-shadow: 0 4px 20px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 4px 40px hsl(var(--accent) / 0.5);
+    }
+  }
 }
